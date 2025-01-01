@@ -1,184 +1,183 @@
 ﻿################################################################################
-## Initialization
+## 초기화
 ################################################################################
 
-## The init offset statement causes the initialization statements in this file
-## to run before init statements in any other file.
+## 이 파일에서 init offset 문을 사용하면 이 파일의 초기화 문이 다른 파일의 init
+## 코드보다 먼저 실행됩니다.
 init offset = -2
 
-## Calling gui.init resets the styles to sensible default values, and sets the
-## width and height of the game.
+## gui.init의 호출은 스타일을 합리적인 기본값으로 재설정하고, 게임의 너비(width)
+## 와 높이(height)를 설정합니다.
 init python:
     gui.init(1920, 1080)
 
-## Enable checks for invalid or unstable properties in screens or transforms
+## 화면 또는 트랜스폼에서 유효하지 않거나 불안정한 프로퍼티 검사 활성화
 define config.check_conflicting_properties = True
 
 
 ################################################################################
-## GUI Configuration Variables
+## GUI 설정 변수
 ################################################################################
 
 
-## Colors ######################################################################
+## 색상 ##########################################################################
 ##
-## The colors of text in the interface.
+## 인터페이스에서 글자의 색상입니다.
 
-## An accent color used throughout the interface to label and highlight text.
-define gui.accent_color = '#000066'
+## 강조 색상은 레이블(label)과 강조된 글자로 인터페이스 전체에서 사용됩니다.
+define gui.accent_color = '#0099cc'
 
-## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = '#707070'
+## 텍스트 버튼(text button)이 선택(selected)됐거나 커서를 올리지(hovered) 않았을
+## 때 사용됩니다.
+define gui.idle_color = '#888888'
 
-## The small color is used for small text, which needs to be brighter/darker to
-## achieve the same effect.
-define gui.idle_small_color = '#606060'
+## 작은(small) 색상은 같은 효과를 내기 위해 더 밝거나 어두워야 하는 작은 글자에
+## 사용됩니다.
+define gui.idle_small_color = '#aaaaaa'
 
-## The color that is used for buttons and bars that are hovered.
-define gui.hover_color = '#000066'
+## 버튼(button)과 막대(bar)에 커서를 올렸을 때(hovered) 사용됩니다.
+define gui.hover_color = '#66c1e0'
 
-## The color used for a text button when it is selected but not focused. A
-## button is selected if it is the current screen or preference value.
-define gui.selected_color = '#555555'
+## 텍스트 버튼(text button)에 선택됐지만(selected) 포커스되지(focused) 않았을 때
+## 사용됩니다. 버튼(button)은 현재 화면이거나 설정값인 경우 선택됨(selected)이
+## 됩니다.
+define gui.selected_color = '#ffffff'
 
-## The color used for a text button when it cannot be selected.
-define gui.insensitive_color = '#7070707f'
+## 텍스트 버튼(text button)이 선택되지(selected) 않았을 때 사용됩니다.
+define gui.insensitive_color = '#8888887f'
 
-## Colors used for the portions of bars that are not filled in. These are not
-## used directly, but are used when re-generating bar image files.
-define gui.muted_color = '#6666a3'
-define gui.hover_muted_color = '#9999c1'
+## 채워지지 않은 빈 막대(bar)에 사용됩니다. 이것은 바로 사용되지 않지만, 막대
+## (bar) 이미지 파일이 재생성됐을 때 사용됩니다.
+define gui.muted_color = '#003d51'
+define gui.hover_muted_color = '#005b7a'
 
-## The colors used for dialogue and menu choice text.
-define gui.text_color = '#404040'
-define gui.interface_text_color = '#404040'
+## 대사(dialogue)와 선택지(menu choice)의 글자에서 사용됩니다.
+define gui.text_color = '#ffffff'
+define gui.interface_text_color = '#ffffff'
 
 
-## Fonts and Font Sizes ########################################################
+## 글자와 글자 크기 ###################################################################
 
-## The font used for in-game text.
-define gui.text_font = "DejaVuSans.ttf"
+## 인-게임 글자에 사용됩니다.
+define gui.text_font = "SourceHanSansLite.ttf"
 
-## The font used for character names.
-define gui.name_text_font = "DejaVuSans.ttf"
+## 캐릭터의 이름에 사용됩니다.
+define gui.name_text_font = "SourceHanSansLite.ttf"
 
-## The font used for out-of-game text.
-define gui.interface_text_font = "DejaVuSans.ttf"
+## 인터페이스에 사용됩니다.
+define gui.interface_text_font = "SourceHanSansLite.ttf"
 
-## The size of normal dialogue text.
+## 일반 대사의 글자 크기입니다.
 define gui.text_size = 33
 
-## The size of character names.
+## 캐릭터 이름의 글자 크기입니다.
 define gui.name_text_size = 45
 
-## The size of text in the game's user interface.
+## 게임의 유저 인터페이스에서 글자의 크기입니다.
 define gui.interface_text_size = 33
 
-## The size of labels in the game's user interface.
+## 게임의 유저 인터페이스에서 레이블(label)들의 글자 크기입니다.
 define gui.label_text_size = 36
 
-## The size of text on the notify screen.
+## 통지(notify) 화면의 글자 크기입니다.
 define gui.notify_text_size = 24
 
-## The size of the game's title.
+## 게임의 타이틀(title) 글자의 크기입니다.
 define gui.title_text_size = 75
 
 
-## Main and Game Menus #########################################################
+## 메인과 게임 메뉴들 ##################################################################
 
-## The images used for the main and game menus.
+## 이미지들은 메인(main)과 게임 메뉴(game menu)에 사용됩니다.
 define gui.main_menu_background = "gui/main_menu.png"
 define gui.game_menu_background = "gui/game_menu.png"
 
 
-## Dialogue ####################################################################
+## 대사 ##########################################################################
 ##
-## These variables control how dialogue is displayed on the screen one line at a
-## time.
+## 이러한 변수들은 한 번에 한 줄의 대사가 어떻게 화면에 표시되는지 제어합니다.
 
-## The height of the textbox containing dialogue.
+## 대사를 포함하는 텍스트 박스의 높이입니다.
 define gui.textbox_height = 278
 
-## The placement of the textbox vertically on the screen. 0.0 is the top, 0.5 is
-## center, and 1.0 is the bottom.
+## 화면에 텍스트박스를 세로로 배치합니다. 0.0은 최상단, 0.5는 중앙, 그리고 1.0은
+## 최하단입니다.
 define gui.textbox_yalign = 1.0
 
 
-## The placement of the speaking character's name, relative to the textbox.
-## These can be a whole number of pixels from the left or top, or 0.5 to center.
+## 말하는 캐릭터의 이름을 텍스트 박스를 기준으로 배치합니다. 이것은 좌측이나 최
+## 상단으로부터 전체 픽셀값의 숫자가 되거나, 0.5로 중앙이 될 수 있습니다.
 define gui.name_xpos = 360
 define gui.name_ypos = 0
 
-## The horizontal alignment of the character's name. This can be 0.0 for left-
-## aligned, 0.5 for centered, and 1.0 for right-aligned.
+## 캐릭터들의 이름을 수평으로 정렬합니다. 이것은 0.0으로 좌측 정렬, 0.5로 중앙,
+## 그리고 1.0으로 우측 정렬될 수 있습니다.
 define gui.name_xalign = 0.0
 
-## The width, height, and borders of the box containing the character's name, or
-## None to automatically size it.
+## 캐릭터들의 이름이 들어 있는 박스의 너비, 높이, 그리고 테두리입니다. 혹은 그것
+## 을 None으로 자동 설정할 수 있습니다.
 define gui.namebox_width = None
 define gui.namebox_height = None
 
-## The borders of the box containing the character's name, in left, top, right,
-## bottom order.
+## 캐릭터의 이름이 들어 있는 박스의 테두리를 좌측, 상단, 우측, 하단의 순서로 정
+## 합니다.
 define gui.namebox_borders = Borders(5, 5, 5, 5)
 
-## If True, the background of the namebox will be tiled, if False, the
-## background of the namebox will be scaled.
+## 만약 참(True)이면, 네임박스의 배경은 바둑판식으로 배열(tiled)될 것이고, 거짓
+## (False)이면, 네임박스의 배경은 채워질(scaled) 것입니다.
 define gui.namebox_tile = False
 
 
-## The placement of dialogue relative to the textbox. These can be a whole
-## number of pixels relative to the left or top side of the textbox, or 0.5 to
-## center.
+## 텍스트박스에서 대사의 위치입니다. These can be a whole number of pixels
+## relative to the left or top side of the textbox, or 0.5 to center.
 define gui.dialogue_xpos = 402
 define gui.dialogue_ypos = 75
 
-## The maximum width of dialogue text, in pixels.
+## 픽셀값에서 대사의 최대 너비입니다.
 define gui.dialogue_width = 1116
 
-## The horizontal alignment of the dialogue text. This can be 0.0 for left-
-## aligned, 0.5 for centered, and 1.0 for right-aligned.
+## 대사 글자의 수평 정렬입니다. 이것은 0.0으로 좌측 정렬, 0.5로 중앙, 그리고 1.0
+## 으로 우측 정렬이 될 수 있습니다.
 define gui.dialogue_text_xalign = 0.0
 
 
-## Buttons #####################################################################
+## 버튼들 #########################################################################
 ##
-## These variables, along with the image files in gui/button, control aspects of
-## how buttons are displayed.
+## 이러한 변수들은 GUI/버튼에서 이미지 파일들과 함께 어떻게 버튼이 표시되는지 제
+## 어합니다.
 
-## The width and height of a button, in pixels. If None, Ren'Py computes a size.
+## 픽셀값에서 버튼의 너비와 높이입니다. 만약 None이면, 렌파이가 크기를 계산합니
+## 다.
 define gui.button_width = None
 define gui.button_height = None
 
-## The borders on each side of the button, in left, top, right, bottom order.
+## 좌측, 상단, 우측, 하단의 순서에서 버튼의 테두리 값입니다.
 define gui.button_borders = Borders(6, 6, 6, 6)
 
-## If True, the background image will be tiled. If False, the background image
-## will be linearly scaled.
+## 만약 참(True)이면, 배경 이미지는 바둑판식으로 배열(tiled)될 것입니다. 만약 거
+## 짓(False)이면, 배경 이미지는 선으로 채워질(scaled) 것입니다.
 define gui.button_tile = False
 
-## The font used by the button.
+## 버튼에 사용된 글자의 폰트입니다.
 define gui.button_text_font = gui.interface_text_font
 
-## The size of the text used by the button.
+## 버튼에 사용된 글자의 크기입니다.
 define gui.button_text_size = gui.interface_text_size
 
-## The color of button text in various states.
+## 다양한 상태의 버튼 글자의 색상입니다.
 define gui.button_text_idle_color = gui.idle_color
 define gui.button_text_hover_color = gui.hover_color
 define gui.button_text_selected_color = gui.selected_color
 define gui.button_text_insensitive_color = gui.insensitive_color
 
-## The horizontal alignment of the button text. (0.0 is left, 0.5 is center, 1.0
-## is right).
+## 버튼 글자의 수평 정렬(0.0은 왼쪽，0.5은 가운데，1.0은 오른쪽)입니다.
 define gui.button_text_xalign = 0.0
 
 
-## These variables override settings for different kinds of buttons. Please see
-## the gui documentation for the kinds of buttons available, and what each is
-## used for.
+## 이러한 변수는 다른 종류의 버튼 설정을 덮어씌웁니다. 사용 가능한 버튼의 종류
+## 와, 각각 무엇을 위해 사용하는지는 gui 문서를 확인해주세요.
 ##
-## These customizations are used by the default interface:
+## 이러한 사용자 지정은 기본 인터페이스에 사용됩니다:
 
 define gui.radio_button_borders = Borders(27, 6, 6, 6)
 
@@ -193,16 +192,16 @@ define gui.quick_button_text_size = 21
 define gui.quick_button_text_idle_color = gui.idle_small_color
 define gui.quick_button_text_selected_color = gui.accent_color
 
-## You can also add your own customizations, by adding properly-named variables.
-## For example, you can uncomment the following line to set the width of a
-## navigation button.
+## 당신은 또한 설정된 이름의 변수를 추가함으로써 당신만의 커스텀을 추가할 수 있
+## 습니다. 예를 들어, 다음 행의 주석 표시를 제거하여 탐색(navigation) 버튼의 너
+## 비를 설정할 수 있습니다.
 
 # define gui.navigation_button_width = 250
 
 
-## Choice Buttons ##############################################################
+## 선택 버튼들 ######################################################################
 ##
-## Choice buttons are used in the in-game menus.
+## 선택 버튼은 인-게임 메뉴에 사용됩니다.
 
 define gui.choice_button_width = 1185
 define gui.choice_button_height = None
@@ -211,18 +210,18 @@ define gui.choice_button_borders = Borders(150, 8, 150, 8)
 define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
-define gui.choice_button_text_idle_color = '#707070'
+define gui.choice_button_text_idle_color = '#888888'
 define gui.choice_button_text_hover_color = "#ffffff"
-define gui.choice_button_text_insensitive_color = '#7070707f'
+define gui.choice_button_text_insensitive_color = '#8888887f'
 
 
-## File Slot Buttons ###########################################################
+## 파일 슬롯 버튼 ####################################################################
 ##
-## A file slot button is a special kind of button. It contains a thumbnail
-## image, and text describing the contents of the save slot. A save slot uses
-## image files in gui/button, like the other kinds of buttons.
+## 파일 슬롯 버튼은 버튼의 특별한 종류입니다. 그것은 썸네일 이미지나 저장 슬롯의
+## 콘텐츠를 설명하는 글자를 포함합니다. GUI/버튼에서 저장 슬롯은 버튼의 다른 종
+## 류와 같은 이미지 파일을 사용합니다.
 
-## The save slot button.
+## 저장 슬롯 버튼입니다.
 define gui.slot_button_width = 414
 define gui.slot_button_height = 309
 define gui.slot_button_borders = Borders(15, 15, 15, 15)
@@ -232,206 +231,203 @@ define gui.slot_button_text_idle_color = gui.idle_small_color
 define gui.slot_button_text_selected_idle_color = gui.selected_color
 define gui.slot_button_text_selected_hover_color = gui.hover_color
 
-## The width and height of thumbnails used by the save slots.
+## 저장 슬롯에 사용되는 썸네일의 너비와 높이입니다.
 define config.thumbnail_width = 384
 define config.thumbnail_height = 216
 
-## The number of columns and rows in the grid of save slots.
+## 저장 슬롯의 그리드(grid)에서 행(rows)과 열(columns)의 갯수입니다.
 define gui.file_slot_cols = 3
 define gui.file_slot_rows = 2
 
 
-## Positioning and Spacing #####################################################
+## 위치와 간격 ######################################################################
 ##
-## These variables control the positioning and spacing of various user interface
-## elements.
+## 이러한 변수들은 다양한 사용자 인터페이스 요소들의 위치와 간격을 제어합니다.
 
-## The position of the left side of the navigation buttons, relative to the left
-## side of the screen.
+## 화면의 왼쪽을 기준으로 하는 네비게이션 버튼의 왼쪽 위치입니다.
 define gui.navigation_xpos = 60
 
-## The vertical position of the skip indicator.
+## 스킵 표시기(skip indicator)의 수직 위치입니다.
 define gui.skip_ypos = 15
 
-## The vertical position of the notify screen.
+## 통지(notify) 스크린의 수직 위치입니다.
 define gui.notify_ypos = 68
 
-## The spacing between menu choices.
+## 선택지의 메뉴 선택 간의 간격입니다.
 define gui.choice_spacing = 33
 
-## Buttons in the navigation section of the main and game menus.
+## 메인과 게임 메뉴에서 네비게이션 섹션의 버튼들 간의 간격입니다.
 define gui.navigation_spacing = 6
 
-## Controls the amount of spacing between preferences.
+## 환경 설정들 간의 간격을 제어합니다.
 define gui.pref_spacing = 15
 
-## Controls the amount of spacing between preference buttons.
+## 환경 설정 버튼들 사이의 간격을 제어합니다.
 define gui.pref_button_spacing = 0
 
-## The spacing between file page buttons.
+## 파일 페이지 버튼들 간의 간격입니다.
 define gui.page_spacing = 0
 
-## The spacing between file slots.
+## 파일 슬롯들 간의 간격입니다.
 define gui.slot_spacing = 15
 
-## The position of the main menu text.
+## 메인 메뉴 글자의 위치입니다.
 define gui.main_menu_text_xalign = 1.0
 
 
-## Frames ######################################################################
+## 프레임들 ########################################################################
 ##
-## These variables control the look of frames that can contain user interface
-## components when an overlay or window is not present.
+## 이러한 변수들은 오버레이되거나 창이 없을 때 보여지는 사용자 인터페이스 구성
+## 요소들을 포함하는 프레임을 제어합니다.
 
-## Generic frames.
+## 일반 프레임.
 define gui.frame_borders = Borders(6, 6, 6, 6)
 
-## The frame that is used as part of the confirm screen.
+## 프레임은 확인(confirm) 화면의 일부로 사용됩니다.
 define gui.confirm_frame_borders = Borders(60, 60, 60, 60)
 
-## The frame that is used as part of the skip screen.
+## 프레임은 스킵(skip) 화면의 일부로 사용됩니다.
 define gui.skip_frame_borders = Borders(24, 8, 75, 8)
 
-## The frame that is used as part of the notify screen.
+## 프레임은 통지(notify) 화면의 일부로 사용됩니다.
 define gui.notify_frame_borders = Borders(24, 8, 60, 8)
 
-## Should frame backgrounds be tiled?
+## 프레임 배경들은 바둑판식으로 배열해야 할까요?
 define gui.frame_tile = False
 
 
-## Bars, Scrollbars, and Sliders ###############################################
+## 막대, 스크롤바, 슬라이더 ##############################################################
 ##
-## These control the look and size of bars, scrollbars, and sliders.
+## 이러한 설정은 막대와 스크롤바, 그리고 슬라이더의 보여지는 것과 크기를 제어합
+## 니다.
 ##
-## The default GUI only uses sliders and vertical scrollbars. All of the other
-## bars are only used in creator-written screens.
+## 기본 GUI는 슬라이더와 세로 스크롤 막대만 사용합니다. 다른 모든 막대는 제작자
+## 가 작성한 화면에서만 사용됩니다.
 
-## The height of horizontal bars, scrollbars, and sliders. The width of vertical
-## bars, scrollbars, and sliders.
+## 수평 막대, 스크롤바, 슬라이더의 높이. 수직 막대, 스크롤바, 슬라이더의 너비.
 define gui.bar_size = 38
 define gui.scrollbar_size = 18
 define gui.slider_size = 38
 
-## True if bar images should be tiled. False if they should be linearly scaled.
+## 막대 이미지가 바둑판식 배열돼야 하면 참(True)입니다. 선으로 채워져야 한다면
+## 거짓(False)입니다.
 define gui.bar_tile = False
 define gui.scrollbar_tile = False
 define gui.slider_tile = False
 
-## Horizontal borders.
+## 수평 테두리입니다.
 define gui.bar_borders = Borders(6, 6, 6, 6)
 define gui.scrollbar_borders = Borders(6, 6, 6, 6)
 define gui.slider_borders = Borders(6, 6, 6, 6)
 
-## Vertical borders.
+## 수직 테두리입니다.
 define gui.vbar_borders = Borders(6, 6, 6, 6)
 define gui.vscrollbar_borders = Borders(6, 6, 6, 6)
 define gui.vslider_borders = Borders(6, 6, 6, 6)
 
-## What to do with unscrollable scrollbars in the gui. "hide" hides them, while
-## None shows them.
+## GUI에서 스크롤할 수 없는 스크롤 막대로 뭘 할 수 있나요? "hide"로 그것들을 숨
+## 기고, None은 그것들을 보여줍니다.
 define gui.unscrollable = "hide"
 
 
-## History #####################################################################
+## 대사록 #########################################################################
 ##
-## The history screen displays dialogue that the player has already dismissed.
+## 대사록 화면은 사용자가 이미 확인한 다이얼로그를 표시합니다.
 
-## The number of blocks of dialogue history Ren'Py will keep.
+## 렌파이가 보관할 대사록의 블록 갯수입니다.
 define config.history_length = 250
 
-## The height of a history screen entry, or None to make the height variable at
-## the cost of performance.
+## 대사록 화면 항목의 높이를 지정하거나 None으로 하여 높이를 성능에 맡길 수 있습
+## 니다.
 define gui.history_height = 210
 
 ## Additional space to add between history screen entries.
 define gui.history_spacing = 0
 
-## The position, width, and alignment of the label giving the name of the
-## speaking character.
+## 말하는 캐릭터의 이름을 나타내는 레이블의 위치, 너비, 그리고 정렬입니다.
 define gui.history_name_xpos = 233
 define gui.history_name_ypos = 0
 define gui.history_name_width = 233
 define gui.history_name_xalign = 1.0
 
-## The position, width, and alignment of the dialogue text.
+## 대사 글자의 위치, 너비, 그리고 정렬입니다.
 define gui.history_text_xpos = 255
 define gui.history_text_ypos = 3
 define gui.history_text_width = 1110
 define gui.history_text_xalign = 0.0
 
 
-## NVL-Mode ####################################################################
+## NVL-모드 ######################################################################
 ##
-## The NVL-mode screen displays the dialogue spoken by NVL-mode characters.
+## NVL-모드 화면은 NVL-모드 캐릭터들에 의한 대화를 화면에 표시합니다.
 
-## The borders of the background of the NVL-mode background window.
+## NVL-모드 배경 창에서 배경의 테두리입니다.
 define gui.nvl_borders = Borders(0, 15, 0, 30)
 
-## The maximum number of NVL-mode entries Ren'Py will display. When more entries
-## than this are to be show, the oldest entry will be removed.
+## 렌파이가 표시할 NVL-mode 항목의 최대 수입니다. 설정보다 많은 항목이 표시되면
+## 가장 오래된 항목이 제거됩니다.
 define gui.nvl_list_length = 6
 
-## The height of an NVL-mode entry. Set this to None to have the entries
-## dynamically adjust height.
+## NVL-모드 항목의 높이입니다. 이것을 None으로 설정하면 항목들은 동적으로 높이를
+## 조정합니다.
 define gui.nvl_height = 173
 
-## The spacing between NVL-mode entries when gui.nvl_height is None, and between
-## NVL-mode entries and an NVL-mode menu.
+## gui.nvl_height 값이 None일 때 NVL-모드 항목들, 그리고 NVL-모드 항목들과 NVL-
+## 모드 메뉴간의 간의 간격입니다.
 define gui.nvl_spacing = 15
 
-## The position, width, and alignment of the label giving the name of the
-## speaking character.
+## 말하는 캐릭터의 이름을 나타내는 레이블의 위치, 너비, 그리고 정렬입니다.
 define gui.nvl_name_xpos = 645
 define gui.nvl_name_ypos = 0
 define gui.nvl_name_width = 225
 define gui.nvl_name_xalign = 1.0
 
-## The position, width, and alignment of the dialogue text.
+## 대사 글자의 위치, 너비, 그리고 정렬입니다.
 define gui.nvl_text_xpos = 675
 define gui.nvl_text_ypos = 12
 define gui.nvl_text_width = 885
 define gui.nvl_text_xalign = 0.0
 
-## The position, width, and alignment of nvl_thought text (the text said by the
-## nvl_narrator character.)
+## nvl_thought 글자의 위치, 너비, 정렬(nvl_narrator 캐릭터에 의해 표시되는 글자)
+## 입니다.
 define gui.nvl_thought_xpos = 360
 define gui.nvl_thought_ypos = 0
 define gui.nvl_thought_width = 1170
 define gui.nvl_thought_xalign = 0.0
 
-## The position of nvl menu_buttons.
+## NVL 메뉴 버튼의 위치입니다.
 define gui.nvl_button_xpos = 675
 define gui.nvl_button_xalign = 0.0
 
 
-## Localization ################################################################
+## 현지화 #########################################################################
 
-## This controls where a line break is permitted. The default is suitable
-## for most languages. A list of available values can be found at https://
-## www.renpy.org/doc/html/style_properties.html#style-property-language
+## 줄 바꿈이 허용되는 위치를 제어합니다. 기본값은 대부분의 언어에 적
+## 합합니다. 사용 가능한 값 목록은 https://www.renpy.org/doc/html/
+## style_properties.html#style-property-language 에서 찾을 수 있습니다.
 
 define gui.language = "unicode"
 
 
 ################################################################################
-## Mobile devices
+## 모바일 기기
 ################################################################################
 
 init python:
 
-    ## This increases the size of the quick buttons to make them easier to touch
-    ## on tablets and phones.
+    ## 이것은 휴대전화와 태블릿에서 쉽게 터치할 수 있도록 빠른(Quick) 버튼들의
+    ## 크기를 크게 합니다.
     @gui.variant
     def touch():
 
         gui.quick_button_borders = Borders(60, 21, 60, 0)
 
-    ## This changes the size and spacing of various GUI elements to ensure they
-    ## are easily visible on phones.
+    ## 이것은 휴대전화에서 다양한 GUI 요소들의 크기와 간격을 쉽게 보일 수 있도록
+    ## 변경합니다.
     @gui.variant
     def small():
 
-        ## Font sizes.
+        ## 글자 크기들.
         gui.text_size = 45
         gui.name_text_size = 54
         gui.notify_text_size = 38
@@ -439,13 +435,13 @@ init python:
         gui.button_text_size = 45
         gui.label_text_size = 51
 
-        ## Adjust the location of the textbox.
+        ## 텍스트박스의 위치를 조정합니다.
         gui.textbox_height = 360
         gui.name_xpos = 120
         gui.dialogue_xpos = 135
         gui.dialogue_width = 1650
 
-        ## Change the size and spacing of various things.
+        ## 다양한 사물의 크기와 간격을 변경합니다.
         gui.slider_size = 54
 
         gui.choice_button_width = 1860
@@ -459,11 +455,11 @@ init python:
 
         gui.quick_button_text_size = 30
 
-        ## File button layout.
+        ## 파일 버튼 레이아웃.
         gui.file_slot_cols = 2
         gui.file_slot_rows = 2
 
-        ## NVL-mode.
+        ## NVL-모드.
         gui.nvl_height = 255
 
         gui.nvl_name_width = 458

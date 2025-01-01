@@ -1,182 +1,177 @@
-﻿## This file contains options that can be changed to customize your game.
+﻿## 이 파일은 귀하의 게임 커스텀으로 변경될 수 있는 옵션을 포함합니다.
 ##
-## Lines beginning with two '#' marks are comments, and you shouldn't uncomment
-## them. Lines beginning with a single '#' mark are commented-out code, and you
-## may want to uncomment them when appropriate.
+## 두 개의 '#' 표시로 시작되는 줄은 주석이며, 그것을 없애지 말아야 합니다. 한 개
+## 의 '#' 표시로 시작되는 줄은 주석 처리된 코드로 필요한 경우 제거해도 됩니다.
 
 
-## Basics ######################################################################
+## 기본 ##########################################################################
 
-## A human-readable name of the game. This is used to set the default window
-## title, and shows up in the interface and error reports.
+## 인간이 읽을 수 있는 게임의 이름. 기본 윈도우의 제목으로 사용되며, 인터페이스
+## 와 오류 보고에서 보여집니다.
 ##
-## The _() surrounding the string marks it as eligible for translation.
+## 문자열을 _()로 둘러 쌓으면 씌우면 번역의 대상으로 표시됩니다.
 
-define config.name = _("WitchHunting")
+define config.name = _("for korean")
 
 
-## Determines if the title given above is shown on the main menu screen. Set
-## this to False to hide the title.
+## 위에 주어진 제목이 주 메뉴 화면에 표시되는지 결정합니다. 제목을 숨기려면 이것
+## 을 False로 설정하십시오.
 
 define gui.show_name = True
 
 
-## The version of the game.
+## 게임의 버전입니다.
 
 define config.version = "1.0"
 
 
-## Text that is placed on the game's about screen. Place the text between the
-## triple-quotes, and leave a blank line between paragraphs.
+## 게임의 about 스크린에 배치되는 텍스트입니다. 텍스트를 삼중 따옴표 사이에 배치
+## 하고 단락 사이에 빈 줄을 남겨 둡니다.
 
 define gui.about = _p("""
 """)
 
 
-## A short name for the game used for executables and directories in the built
-## distribution. This must be ASCII-only, and must not contain spaces, colons,
-## or semicolons.
+## 배포판의 실행 파일과 디렉토리에 사용되는 게임의 약식 이름. 이것은 ASCII 전용
+## 이어야 하며 공백, 콜론 또는 세미콜론을 포함해서는 안 됩니다.
 
-define build.name = "WitchHunting"
+define build.name = "forkorean"
 
 
-## Sounds and music ############################################################
+## 음악과 음향 ######################################################################
 
-## These three variables control, among other things, which mixers are shown
-## to the player by default. Setting one of these to False will hide the
-## appropriate mixer.
+## 이 세 가지 변수는 무엇보다도 플레이어에게 기본적으로 표시되는 믹서를 제어합니
+## 다. 이 중 하나를 False로 설정하면 해당 믹서가 숨겨집니다.
 
 define config.has_sound = True
 define config.has_music = True
 define config.has_voice = True
 
 
-## To allow the user to play a test sound on the sound or voice channel,
-## uncomment a line below and use it to set a sample sound to play.
+## 사용자가 음향 또는 음성 채널에서 테스트 사운드를 재생할 수 있게 하려면 아래
+## 줄의 주석을 제거하고 이를 사용하여 재생할 샘플 사운드를 설정하십시오.
 
 # define config.sample_sound = "sample-sound.ogg"
 # define config.sample_voice = "sample-voice.ogg"
 
 
-## Uncomment the following line to set an audio file that will be played while
-## the player is at the main menu. This file will continue playing into the
-## game, until it is stopped or another file is played.
+## 플레이어가 주 메뉴에 있을 때 재생할 오디오 파일을 설정하려면 다음 줄의 주석
+## 처리를 제거하십시오. 이 파일은 중지되거나 다른 파일이 재생 될 때까지 계속 재
+## 생합니다.
 
 # define config.main_menu_music = "main-menu-theme.ogg"
 
 
-## Transitions #################################################################
+## 번역 ##########################################################################
 ##
-## These variables set transitions that are used when certain events occur.
-## Each variable should be set to a transition, or None to indicate that no
-## transition should be used.
+## 이러한 변수는 특정 이벤트가 발생할 때 사용되는 전환을 설정합니다. 각 변수는
+## 전환으로 설정해야 하며, 전환을 사용하지 말아야 한다는 것을 나타내려면 None으
+## 로 설정해야 합니다.
 
-## Entering or exiting the game menu.
+## 게임 메뉴에 진입하거나 나갑니다.
 
 define config.enter_transition = dissolve
 define config.exit_transition = dissolve
 
 
-## Between screens of the game menu.
+## 게임 메뉴 화면 사이입니다.
 
 define config.intra_transition = dissolve
 
 
-## A transition that is used after a game has been loaded.
+## 게임이 로드된 후 사용되는 전환입니다.
 
 define config.after_load_transition = None
 
 
-## Used when entering the main menu after the game has ended.
+## 게임 종료 후 주 메뉴에 진입할 때 사용됩니다.
 
 define config.end_game_transition = None
 
 
-## A variable to set the transition used when the game starts does not exist.
-## Instead, use a with statement after showing the initial scene.
+## 게임을 시작할 때 사용되는 전환을 설정하는 변수가 없습니다. 대신, 초기 장면을
+## 표시한 후 with 문을 사용하십시오.
 
 
-## Window management ###########################################################
+## 창 관리 ########################################################################
 ##
-## This controls when the dialogue window is displayed. If "show", it is always
-## displayed. If "hide", it is only displayed when dialogue is present. If
-## "auto", the window is hidden before scene statements and shown again once
-## dialogue is displayed.
+## 이것은 대사 창이 표시됐을 때 제어합니다. 만약 "show"면, 그것은 상항 표시됩니
+## 다. 만약 "hide"면, 그것은 대사가 주어질 때만 표시됩니다. 만약 "auto"면, 창은
+## 장면(scene) 문 앞에 숨겨져 대화 상자가 표시되면 다시 표시됩니다.
 ##
-## After the game has started, this can be changed with the "window show",
-## "window hide", and "window auto" statements.
+## 게임이 시작된 후에는 "window show", "window hide", 그리고 "window auto" 문을
+## 사용하여 변경할 수 있습니다.
 
 define config.window = "auto"
 
 
-## Transitions used to show and hide the dialogue window
+## 대화 창을 표시하고 숨기는 데 사용되는 전환
 
 define config.window_show_transition = Dissolve(.2)
 define config.window_hide_transition = Dissolve(.2)
 
 
-## Preference defaults #########################################################
+## 환경설정 기본값 ####################################################################
 
-## Controls the default text speed. The default, 0, is infinite, while any other
-## number is the number of characters per second to type out.
+## 기본 글자 속도를 제어합니다. 기본적으로, 0은 즉시이며 다른 숫자는 초당 입력
+## 할 문자 수입니다.
 
 default preferences.text_cps = 0
 
 
-## The default auto-forward delay. Larger numbers lead to longer waits, with 0
-## to 30 being the valid range.
+## 기본 auto-forward 지연 시간입니다. 숫자가 클수록 대기 시간이 길어지며, 0 ~ 30
+## 이 유효한 범위가 됩니다.
 
 default preferences.afm_time = 15
 
 
-## Save directory ##############################################################
+## 세이브 디렉토리 ####################################################################
 ##
-## Controls the platform-specific place Ren'Py will place the save files for
-## this game. The save files will be placed in:
+## 렌파이는 이 게임에 대한 저장 파일을 플랫폼 별로 배치합니다. 세이브 파일들은
+## 여기에 있습니다:
 ##
-## Windows: %APPDATA\RenPy\<config.save_directory>
+## 윈도우즈: %APPDATA\RenPy\<config.save_directory>
 ##
-## Macintosh: $HOME/Library/RenPy/<config.save_directory>
+## 매킨토시: $HOME/Library/RenPy/<config.save_directory>
 ##
-## Linux: $HOME/.renpy/<config.save_directory>
+## 리눅스: $HOME/.renpy/<config.save_directory>
 ##
-## This generally should not be changed, and if it is, should always be a
-## literal string, not an expression.
+## 이것은 일반적으로 변경해서는 안 되며, 항상 표현형식이 아닌 정확한 문자열이어
+## 야 합니다.
 
-define config.save_directory = "WitchHunting-1734348936"
+define config.save_directory = "forkorean-1735395426"
 
 
 ## Icon ########################################################################
 ##
-## The icon displayed on the taskbar or dock.
+## 작업 표시 줄 또는 독에 표시되는 아이콘.
 
 define config.window_icon = "gui/window_icon.png"
 
 
-## Build configuration #########################################################
+## 빌드 구성 #######################################################################
 ##
-## This section controls how Ren'Py turns your project into distribution files.
+## 이 섹션은 렌파이가 프로젝트를 배포 파일로 만드는 방법을 제어합니다.
 
 init python:
 
-    ## The following functions take file patterns. File patterns are case-
-    ## insensitive, and matched against the path relative to the base directory,
-    ## with and without a leading /. If multiple patterns match, the first is
-    ## used.
+    ## 다음 함수는 파일 패턴을 사용합니다. 파일 패턴은 대/소문자를 구분하지 않으
+    ## 며, /의 유무와 관계없이 기본 디렉터리의 상대 경로와 일치합니다. 여러 패턴
+    ## 이 일치하면 첫 번째 패턴이 사용됩니다.
     ##
-    ## In a pattern:
+    ## 패턴 있음:
     ##
-    ## / is the directory separator.
+    ## / 는 디렉토리 구분 기호입니다.
     ##
-    ## * matches all characters, except the directory separator.
+    ## * 는 디렉토리 구분자를 제외한 모든 문자와 일치합니다.
     ##
-    ## ** matches all characters, including the directory separator.
+    ## ** 는 디렉토리 구분자를 포함해 모든 문자와 일치합니다.
     ##
-    ## For example, "*.txt" matches txt files in the base directory, "game/
-    ## **.ogg" matches ogg files in the game directory or any of its
-    ## subdirectories, and "**.psd" matches psd files anywhere in the project.
+    ## 예를 들어, "*.txt" 는 기본 디렉토리의 txt 파일들과 일치하고, "game/
+    ## **.ogg" 는 게임 디렉토리 또는 그 서브 디렉토리의 ogg 파일들과 일치하며,
+    ## "**.psd" 는 프로젝트에서 모든 곳의 psd 파일들과 일치합니다.
 
-    ## Classify files as None to exclude them from the built distributions.
+    ## 파일을 None으로 분류하여 배포판으로부터 제외하십시오.
 
     build.classify('**~', None)
     build.classify('**.bak', None)
@@ -184,26 +179,25 @@ init python:
     build.classify('**/#**', None)
     build.classify('**/thumbs.db', None)
 
-    ## To archive files, classify them as 'archive'.
+    ## 파일을 아카이브하려면 'archive'로 분류하십시오.
 
     # build.classify('game/**.png', 'archive')
     # build.classify('game/**.jpg', 'archive')
 
-    ## Files matching documentation patterns are duplicated in a mac app build,
-    ## so they appear in both the app and the zip file.
+    ## 파일들의 매칭 문서 패턴은 맥앱(Mac App) 빌드에서 중복되므로 app 및 zip 파
+    ## 일에 모두 나타납니다.
 
     build.documentation('*.html')
     build.documentation('*.txt')
 
 
-## A Google Play license key is required to perform in-app purchases. It can be
-## found in the Google Play developer console, under "Monetize" > "Monetization
-## Setup" > "Licensing".
+## 인앱 구매를 수행하려면 Google Play 라이선스 키가 필요합니다. Google Play 개발
+## 자 콘솔의 '수익 창출' > '수익 창출 설정' > '라이선스'에서 찾을 수 있습니다.
 
 # define build.google_play_key = "..."
 
 
-## The username and project name associated with an itch.io project, separated
-## by a slash.
+## itch.io 프로젝트와 연관된 사용자 이름과 프로젝트 이름이며 슬래시로 구분됩니
+## 다.
 
 # define build.itch_project = "renpytom/test-project"

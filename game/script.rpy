@@ -1,33 +1,17 @@
-﻿# The script of the game goes in this file.
+﻿# 이 파일에 게임 스크립트를 입력합니다.
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
+# image 문을 사용해 이미지를 정의합니다.
+# image eileen happy = "eileen_happy.png"
 
-define e = Character("Eileen")
+# 게임에서 사용할 캐릭터를 정의합니다.
+define e = Character('아이린', color="#c8ffc8")
 
 
-# The game starts here.
-
+# 여기에서부터 게임이 시작합니다.
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+    e "새로운 렌파이 게임을 만들었군요."
 
-    scene bg room
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-    show eileen happy
-
-    # These display lines of dialogue.
-
-    e "You've created a new Ren'Py game."
-
-    e "Once you add a story, pictures, and music, you can release it to the world!"
-
-    # This ends the game.
+    e "이야기와 그림, 음악을 더하면 여러분의 게임을 세상에 배포할 수 있어요!"
 
     return
